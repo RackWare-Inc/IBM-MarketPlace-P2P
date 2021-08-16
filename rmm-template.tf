@@ -4,7 +4,7 @@ variable "TF_VERSION" {
 }
 
 variable "image_url" {
-  default = "cos://us-east/rackware-rmm-bucket/RackwareP2PBYOLTemplate.qcow2"
+  default = "cos://us-east/rackware-rmm-bucket/RackWareP2PBYOL.qcow2"
 }
 
 /**
