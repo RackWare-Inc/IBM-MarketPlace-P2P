@@ -14,7 +14,7 @@ Cloud infrastructure. RackWare RMM includes discovery, analysis and automation f
 processes to be fast, easy and error-free.
 
 Key Benefits
-- Non-disruptive / Live Migrations
+- Live Migrations
 - Highly secure and efficient data transfer.
 - Include / Exclude Lists: Capture and sync only specific files and directories rather than entire
 systems.
@@ -32,6 +32,7 @@ For more information, visit https://www.rackwareinc.com/cloud-migration
 - Proper IBM Cloud account permissions and access
 - Identify a region and zone on where you will want to  deploy the RMM server
 - The region should be under IBM Cloud account quota for VPC, security groups, and floating IP
+- Know more about IBM VPC, visit https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started 
 
 ## Software Installation/Deployment
 The RMM software will come pre-installed as part of the VSI provisioning.  Once VSI is deployed, you
@@ -42,27 +43,8 @@ password.
 Link to the user guide for RMM server, https://www.rackwareinc.com/rackware-rmm-users-guide-for-ibm-cloud
 
 # License Requirements
-Licenses required for migration to IBM Cloud is bring your own license (BYOL).  The license is a
-subscription based license, paid monthly that enables you to migrate one or more servers during the
-subscription period. User will need to purchase the license directly from Rackware through
-sales@rackwareinc.com.
+For migration using the RMM server, the license model is bring your own license (BYOL). The license is a subscription based license, paid monthly.  Each license allows you to migrate one or more servers during the subscription period. Only one server can be migrated at any given time with one license. You will need additional licenses to perform concurrent migrations.  To purchase and install licenses please refer to the section : License Procurement Process
 
-
-For additional information about pricing or inquiries, reach out to sales@rackwareinc.com
-
-
-### License Procurement Process
-
-The license procurement process is pretty simple. Contact RackWare at sales@rackwareinc.com to purchase
-the licenses based on workload count as per user migration requirement. User should receive purchase order
-from RackWare sales team after license are purchased. Run command 'rwadm relicense' on RMM CLI to generate preinstall file.
-Please send license generation request to RackWare licensing team at licensing@rackwareinc.com
-with following information after generating preinstall file using above method :
-- RackWare RMM License ( Subject line )
-- CompanyName
-- LicenseCount
-- PreinstallFile (attached)
-- PurchaseOrder (attached)
 
 ### Ordering Page Deployment Values
 This will create a new VPC to install the RMM server.
@@ -84,6 +66,22 @@ This will create a new VPC to install the RMM server.
 - Create additional user (optional)
 - Update VPC security groups or ACL if needed
 
+### License Procurement Process
+
+To purchase license, follow the below steps. 
+1)	Contact RackWare at sales@rackwareinc.com to purchase
+the licenses and specify the number of licenses. 
+2)	User should receive purchase order from RackWare sales team after license are purchased. 
+3)	Run command 'rwadm relicense' on RMM CLI to generate preinstall file.
+4)	Please send an email to licensing@rackwareinc.com with following information.
+- RackWare RMM License ( Subject line )
+- CompanyName
+- LicenseCount
+- PreinstallFile (attached)
+- PurchaseOrder (attached)
+5) You will receive the requested licenses. Please follow the steps mentioned in the email to apply the licenses and validate.
+Now you are ready to use the RMM server for migration. 
+
 ## Uninstalling the software
 Complete the following steps to uninstall a Helm chart from your account. 
 
@@ -93,6 +91,7 @@ Complete the following steps to uninstall a Helm chart from your account.
 4. Click **Update**.
 5. To delete your workspace, click **Actions** > **Delete workspace**.
 
+
 ## Getting Support
 ### Getting support through RackWare support team
 Please open any issues directly with RackWare support team. The support team is available 365x24x7.
@@ -101,4 +100,4 @@ Please open a case via following options:
 - Email : support@rackwareinc.com
 - Phone : +1 (844) 797-8776
 
-In all cases, please add RackWare RMM in the subject line. The RackWare support is based in United States and India.
+In all cases, please add RackWare RMM - IBM Cloud in the subject line. The RackWare support is based in United States and India.
